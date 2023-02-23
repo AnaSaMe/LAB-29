@@ -2,7 +2,9 @@
 title: "LAB 29 (MD)"
 author: "AnaGSanjuanM"
 date: "2023-02-23"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 ------------------LABORATORIO 29----------------------
@@ -29,21 +31,11 @@ El archivo se leerá con read.csv y se copia y pega la ruta del archivo
 data2013 <- read.csv("C:\\Users\\Lenovo\\Documents\\GitHub\\LAB-29\\L29 input\\greenR_2013.csv")
 ```
 
-Para visualizar
-```{r}
-data2013
-```
-
 Se transforma a tabla de datos
 
 Signo de asiganción y debe leerlo as.date.table de data 2013
 ```{r}
 data2013 <- as.data.table(data2013)
-```
-
-Para visualizar
-```{r}
-data2013
 ```
 
 Para sabér qué clase de datos son se coloca class
@@ -75,11 +67,5 @@ resultados2013 <- data2013 %>%
             suma_GCP_2013 = sum(GCP_2013, na.rm = T),
             count = n())
 ```
-
-Para visualizar
-```{r}
-resultados2013
-```
-
 
 ------------------FIN LABORATORIO 29-----------------------
